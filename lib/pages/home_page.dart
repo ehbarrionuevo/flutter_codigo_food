@@ -207,7 +207,7 @@ class HomePage extends StatelessWidget {
                         ),
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Colors.white.withOpacity(0.88),
                           borderRadius: BorderRadius.circular(14.0),
                         ),
                         child: Column(
@@ -220,6 +220,9 @@ class HomePage extends StatelessWidget {
                                 fontSize: 20.0,
                                 fontWeight: FontWeight.bold,
                               ),
+                            ),
+                            const SizedBox(
+                              height: 4.0,
                             ),
                             Row(
                               children: [
@@ -250,6 +253,65 @@ class HomePage extends StatelessWidget {
                                     color: Colors.black45,
                                     fontSize: 13.0,
                                   ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 6.0,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.restaurant_menu_outlined,
+                                      color: Colors.black45,
+                                    ),
+                                    SizedBox(
+                                      width: 3.0,
+                                    ),
+                                    Text(
+                                      "Dessert",
+                                      style: TextStyle(
+                                        color: Colors.black45,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.location_on_outlined,
+                                      color: Colors.black45,
+                                    ),
+                                    SizedBox(
+                                      width: 3.0,
+                                    ),
+                                    Text(
+                                      "1.4km",
+                                      style: TextStyle(
+                                        color: Colors.black45,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.price_check,
+                                      color: Colors.black45,
+                                    ),
+                                    SizedBox(
+                                      width: 3.0,
+                                    ),
+                                    Text(
+                                      "23/person",
+                                      style: TextStyle(
+                                        color: Colors.black45,
+                                      ),
+                                    )
+                                  ],
                                 ),
                               ],
                             ),
