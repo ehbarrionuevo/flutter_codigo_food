@@ -144,6 +144,31 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(
+                height: 26.0,
+              ),
+              Container(
+                height: 130,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14.0),
+                  image: const DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                      "https://designhub.co/wp-content/uploads/2020/10/Food5EF.jpg",
+                    ),
+                  ),
+                ),
+              ),
+              // ClipRRect(
+              //   borderRadius: BorderRadius.circular(14.0),
+              //   child: Image.network(
+              //     "https://designhub.co/wp-content/uploads/2020/10/Food5EF.jpg",
+              //     height: 130,
+              //     width: double.infinity,
+              //     fit: BoxFit.cover,
+              //   ),
+              // ),
             ],
           ),
         ),
