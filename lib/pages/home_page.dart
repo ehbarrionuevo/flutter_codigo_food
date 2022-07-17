@@ -169,6 +169,97 @@ class HomePage extends StatelessWidget {
               //     fit: BoxFit.cover,
               //   ),
               // ),
+              const SizedBox(
+                height: 26.0,
+              ),
+              Container(
+                height: 260,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(14.0),
+                  image: const DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                      "https://www.localburger.com.co/web/image/725",
+                    ),
+                  ),
+                ),
+                // child: Column(
+                //   mainAxisAlignment: MainAxisAlignment.end,
+                //   children: [
+                //     Container(
+                //       margin: const EdgeInsets.all(22.0),
+                //       width: double.infinity,
+                //       color: Colors.white,
+                //       child: Text("Hola asdasdsa "),
+                //     ),
+                //   ],
+                // ),
+                child: Stack(
+                  children: [
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        margin: const EdgeInsets.all(22.0),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 14.0,
+                          vertical: 12.0,
+                        ),
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(14.0),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Text(
+                              "The Soothing Dessert",
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Row(
+                              children: [
+                                ...List.generate(
+                                  5,
+                                  (index) => const Icon(
+                                    Icons.star,
+                                    size: 15.0,
+                                    color: Color(0xffFABE4F),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 4.0,
+                                ),
+                                const Text(
+                                  "4.5",
+                                  style: TextStyle(
+                                    color: Color(0xffFABE4F),
+                                    fontSize: 13.0,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 6.0,
+                                ),
+                                const Text(
+                                  "(250 Reviews)",
+                                  style: TextStyle(
+                                    color: Colors.black45,
+                                    fontSize: 13.0,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
