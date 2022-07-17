@@ -73,12 +73,12 @@ class HomePage extends StatelessWidget {
                             height: 28,
                             width: 28,
                             padding: const EdgeInsets.all(6.0),
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               shape: BoxShape.circle,
                             ),
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 // borderRadius: BorderRadius.circular(40.0),
                                 color: Color(0xffFF3008),
@@ -90,6 +90,37 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              const SizedBox(
+                height: 30.0,
+              ),
+              TextField(
+                decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Color(0xffF3F3F3),
+                  hintText: "Search restaurants or foods",
+                  hintStyle: TextStyle(
+                    fontSize: 15.0,
+                    color: Colors.black.withOpacity(0.4),
+                  ),
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 10.0,
+                    vertical: 16.0,
+                  ),
+                  prefixIcon: SvgPicture.asset(
+                    'assets/icons/search.svg',
+                    color: Colors.black.withOpacity(0.4),
+                    fit: BoxFit.scaleDown,
+                  ),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(14.0),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                    borderRadius: BorderRadius.circular(14.0),
+                  ),
+                ),
               ),
             ],
           ),
