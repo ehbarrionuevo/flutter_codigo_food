@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -15,7 +16,13 @@ class HomePage extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("Deliver to"),
+                        Text(
+                          "Deliver to",
+                          style: TextStyle(
+                            color: Colors.black.withOpacity(0.5),
+                            fontSize: 14.0,
+                          ),
+                        ),
                         Row(
                           children: [
                             Icon(
@@ -23,6 +30,10 @@ class HomePage extends StatelessWidget {
                             ),
                             Text(
                               "New York, USA",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16.0,
+                              ),
                             ),
                             Icon(
                               Icons.arrow_drop_down,
