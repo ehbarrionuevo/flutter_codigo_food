@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  int indexSelected = 2;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -352,75 +359,87 @@ class HomePage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16.0,
-                        vertical: 8.0,
-                      ),
-                      margin: EdgeInsets.only(right: 12.0),
-                      decoration: BoxDecoration(
-                        color: Color(0xffEE4D2A),
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      child: Text(
-                        "Recommend",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
+                    GestureDetector(
+                      onTap: () {
+                        indexSelected = 0;
+                        setState(() {});
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16.0,
+                          vertical: 8.0,
+                        ),
+                        margin: EdgeInsets.only(right: 12.0),
+                        decoration: BoxDecoration(
+                          color: indexSelected == 0
+                              ? Color(0xffEE4D2A)
+                              : Color(0xffF5F7FB),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: Text(
+                          "Recommend",
+                          style: TextStyle(
+                            color: indexSelected == 0
+                                ? Colors.white
+                                : Colors.black45,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16.0,
-                        vertical: 8.0,
-                      ),
-                      margin: EdgeInsets.only(right: 12.0),
-                      decoration: BoxDecoration(
-                        color: Color(0xffF5F7FB),
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      child: Text(
-                        "Junk food",
-                        style: TextStyle(
-                          color: Colors.black45,
-                          fontWeight: FontWeight.bold,
+                    GestureDetector(
+                      onTap: () {
+                        indexSelected = 1;
+                        setState(() {});
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16.0,
+                          vertical: 8.0,
+                        ),
+                        margin: EdgeInsets.only(right: 12.0),
+                        decoration: BoxDecoration(
+                          color: indexSelected == 1
+                              ? Color(0xffEE4D2A)
+                              : Color(0xffF5F7FB),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: Text(
+                          "Junk food",
+                          style: TextStyle(
+                            color: indexSelected == 1
+                                ? Colors.white
+                                : Colors.black45,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16.0,
-                        vertical: 8.0,
-                      ),
-                      margin: EdgeInsets.only(right: 12.0),
-                      decoration: BoxDecoration(
-                        color: Color(0xffF5F7FB),
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      child: Text(
-                        "Vegan",
-                        style: TextStyle(
-                          color: Colors.black45,
-                          fontWeight: FontWeight.bold,
+                    GestureDetector(
+                      onTap: () {
+                        indexSelected = 2;
+                        setState(() {});
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 16.0,
+                          vertical: 8.0,
                         ),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 16.0,
-                        vertical: 8.0,
-                      ),
-                      margin: EdgeInsets.only(right: 12.0),
-                      decoration: BoxDecoration(
-                        color: Color(0xffF5F7FB),
-                        borderRadius: BorderRadius.circular(30.0),
-                      ),
-                      child: Text(
-                        "Drinks",
-                        style: TextStyle(
-                          color: Colors.black45,
-                          fontWeight: FontWeight.bold,
+                        margin: EdgeInsets.only(right: 12.0),
+                        decoration: BoxDecoration(
+                          color: indexSelected == 2
+                              ? Color(0xffEE4D2A)
+                              : Color(0xffF5F7FB),
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: Text(
+                          "Drinks",
+                          style: TextStyle(
+                            color: indexSelected == 2
+                                ? Colors.white
+                                : Colors.black45,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                       ),
                     ),
