@@ -448,11 +448,147 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
+                const SizedBox(
+                  height: 26.0,
+                ),
 
                 Container(
-                  height: 200,
-                  width: 100,
-                  color: Colors.red,
+                  padding: const EdgeInsets.all(12.0),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(12.0),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.06),
+                        blurRadius: 12,
+                        offset: const Offset(4, 4),
+                      ),
+                    ],
+                  ),
+                  child: Row(
+                    children: [
+                      ClipRRect(
+                        borderRadius: BorderRadius.circular(12.0),
+                        child: Image.network(
+                          "https://cdn2.cocinadelirante.com/sites/default/files/images/2018/06/consejos-para-hacer-la-carne-jugosa-para-parrillada-4.jpg",
+                          height: 110.0,
+                          width: 110.0,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10.0,
+                      ),
+                      Expanded(
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  "Deli & Leisure",
+                                  style: TextStyle(
+                                    fontSize: 16.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    Icon(
+                                      Icons.star,
+                                      size: 15.0,
+                                      color: Color(0xffFABE4F),
+                                    ),
+                                    const Text(
+                                      "4.5",
+                                      style: TextStyle(
+                                        color: Color(0xffFABE4F),
+                                        fontSize: 13.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 6.0,
+                            ),
+                            Text(
+                              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                            const SizedBox(
+                              height: 6.0,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.restaurant_menu_outlined,
+                                      color: Colors.black45,
+                                    ),
+                                    SizedBox(
+                                      width: 3.0,
+                                    ),
+                                    Text(
+                                      "Dessert",
+                                      style: TextStyle(
+                                        color: Colors.black45,
+                                        fontSize: 12,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.location_on_outlined,
+                                      color: Colors.black45,
+                                    ),
+                                    SizedBox(
+                                      width: 3.0,
+                                    ),
+                                    Text(
+                                      "1.4km",
+                                      style: TextStyle(
+                                        color: Colors.black45,
+                                        fontSize: 12.0,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                Row(
+                                  children: const [
+                                    Icon(
+                                      Icons.price_check,
+                                      color: Colors.black45,
+                                    ),
+                                    SizedBox(
+                                      width: 3.0,
+                                    ),
+                                    Text(
+                                      "23/person",
+                                      style: TextStyle(
+                                        color: Colors.black45,
+                                        fontSize: 12.0,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(
+                  height: 70.0,
                 ),
               ],
             ),
