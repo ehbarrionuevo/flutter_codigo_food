@@ -94,33 +94,55 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 30.0,
               ),
-              TextField(
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Color(0xffF3F3F3),
-                  hintText: "Search restaurants or foods",
-                  hintStyle: TextStyle(
-                    fontSize: 15.0,
-                    color: Colors.black.withOpacity(0.4),
+              Row(
+                children: [
+                  Expanded(
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xffF3F3F3),
+                        hintText: "Search restaurants or foods",
+                        hintStyle: TextStyle(
+                          fontSize: 15.0,
+                          color: Colors.black.withOpacity(0.4),
+                        ),
+                        contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 10.0,
+                          vertical: 16.0,
+                        ),
+                        prefixIcon: SvgPicture.asset(
+                          'assets/icons/search.svg',
+                          color: Colors.black.withOpacity(0.4),
+                          fit: BoxFit.scaleDown,
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(14.0),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(14.0),
+                        ),
+                      ),
+                    ),
                   ),
-                  contentPadding: const EdgeInsets.symmetric(
-                    horizontal: 10.0,
-                    vertical: 16.0,
+                  const SizedBox(
+                    width: 20.0,
                   ),
-                  prefixIcon: SvgPicture.asset(
-                    'assets/icons/search.svg',
-                    color: Colors.black.withOpacity(0.4),
-                    fit: BoxFit.scaleDown,
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFF3008),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: SvgPicture.asset(
+                      'assets/icons/filter.svg',
+                      color: Colors.white,
+                      fit: BoxFit.scaleDown,
+                    ),
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                    borderRadius: BorderRadius.circular(14.0),
-                  ),
-                ),
+                ],
               ),
             ],
           ),
