@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(22.0),
           child: Column(
             children: [
               Row(
@@ -64,20 +64,25 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     child: Stack(
+                      clipBehavior: Clip.none,
                       children: [
-                        Container(
-                          height: 32,
-                          width: 32,
-                          padding: const EdgeInsets.all(6.0),
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
-                          ),
+                        Positioned(
+                          top: -12,
+                          right: -12,
                           child: Container(
+                            height: 28,
+                            width: 28,
+                            padding: const EdgeInsets.all(6.0),
                             decoration: BoxDecoration(
+                              color: Colors.white,
                               shape: BoxShape.circle,
-                              // borderRadius: BorderRadius.circular(40.0),
-                              color: Color(0xffFF3008),
+                            ),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                // borderRadius: BorderRadius.circular(40.0),
+                                color: Color(0xffFF3008),
+                              ),
                             ),
                           ),
                         ),
