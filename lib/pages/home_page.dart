@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(22.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
@@ -170,7 +171,17 @@ class HomePage extends StatelessWidget {
               //   ),
               // ),
               const SizedBox(
-                height: 26.0,
+                height: 12.0,
+              ),
+              const Text(
+                "Promotions",
+                style: TextStyle(
+                  fontSize: 14.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(
+                height: 12.0,
               ),
               Container(
                 height: 260,
@@ -316,6 +327,100 @@ class HomePage extends StatelessWidget {
                               ],
                             ),
                           ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(
+                height: 12.0,
+              ),
+              const Text(
+                "Categories",
+                style: TextStyle(
+                  fontSize: 14.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(
+                height: 12.0,
+              ),
+
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 8.0,
+                      ),
+                      margin: EdgeInsets.only(right: 12.0),
+                      decoration: BoxDecoration(
+                        color: Color(0xffEE4D2A),
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      child: Text(
+                        "Recommend",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 8.0,
+                      ),
+                      margin: EdgeInsets.only(right: 12.0),
+                      decoration: BoxDecoration(
+                        color: Color(0xffF5F7FB),
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      child: Text(
+                        "Junk food",
+                        style: TextStyle(
+                          color: Colors.black45,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 8.0,
+                      ),
+                      margin: EdgeInsets.only(right: 12.0),
+                      decoration: BoxDecoration(
+                        color: Color(0xffF5F7FB),
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      child: Text(
+                        "Vegan",
+                        style: TextStyle(
+                          color: Colors.black45,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16.0,
+                        vertical: 8.0,
+                      ),
+                      margin: EdgeInsets.only(right: 12.0),
+                      decoration: BoxDecoration(
+                        color: Color(0xffF5F7FB),
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      child: Text(
+                        "Drinks",
+                        style: TextStyle(
+                          color: Colors.black45,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ),
